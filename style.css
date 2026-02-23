@@ -56,13 +56,13 @@ img {
 }
 
 section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 15px;
@@ -199,15 +199,40 @@ section {
 /* Seção Hero */
 .hero-section {
     height: 90vh;
-    background-image: url('https://cacs-cairbarschutel.org.br/wp-content/uploads/2023/01/Home-CACS.jpeg');
-    background-size: cover;
-    background-position: center;
+    /* Background removed - handled by carousel */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
+    overflow: hidden;
+    /* Ensure images don't overflow */
+}
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -246,7 +271,7 @@ section {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     text-align: center;
 }
@@ -264,12 +289,47 @@ section {
     transform: translateY(-10px);
 }
 
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes countUp {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: var(--target);
+    }
+}
+
 .stat-number {
-    display: block;
+    display: inline-block;
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* animation moved to .visible state */
+    counter-reset: num var(--num);
+}
+
+.impact-section.visible .stat-number {
+    animation: countUp 4s ease-out forwards;
+}
+
+.stat-number::after {
+    content: counter(num);
+}
+
+.stat-plus {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,7 +343,7 @@ section {
 .split-layout {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .split-layout.reverse {
@@ -298,6 +358,11 @@ section {
 .image-wrapper img {
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.05);
 }
 
 .text-wrapper {
@@ -353,30 +418,31 @@ section {
 
 /* Chamada para Ação */
 .cta-section {
+    background-color: transparent;
+    /* Reset to default */
+}
+
+.cta-box {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
 }
 
 .links-wrapper {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 30px;
     flex-wrap: wrap;
-}
-
-.link-item {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.link-item:hover {
-    color: var(--primary-color);
-    transform: translateX(10px);
 }
 
 /* Seção de Contato */
@@ -401,6 +467,14 @@ section {
     margin-top: 30px;
     display: flex;
     gap: 20px;
+}
+
+.badges img {
+    transition: transform 0.3s;
+}
+
+.badges img:hover {
+    transform: scale(1.1);
 }
 
 .contact-form {
@@ -460,7 +534,8 @@ section {
         text-align: center;
     }
 
-    .gallery-grid {
+    .gallery-grid,
+    .stats-grid {
         grid-template-columns: 1fr;
     }
 

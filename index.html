@@ -17,7 +17,7 @@
 
 <body>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- Cabeçalho / Navegação - ---->
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
@@ -52,39 +52,61 @@
     <main>
         <!-- Seção Hero -->
         <section class="hero-section">
+            <div class="hero-carousel">
+                <div class="carousel-slide active" style="background-image: url('Fotos/hero-bg.jpg')"></div>
+                <div class="carousel-slide" style="background-image: url('Fotos/CB2.jpg')"></div>
+                <!-- Encoding special characters in filename just in case, though browser usually handles spaces -->
+                <div class="carousel-slide" style="background-image: url('Fotos/IMG-20251122-WA0023.jpg')"></div>
+                <div class="carousel-slide"
+                    style="background-image: url('Fotos/WhatsApp Image 2025-12-08 at 11.05.23 (10).jpg')"></div>
+            </div>
             <div class="hero-overlay"></div>
             <div class="container hero-content fade-in-up">
                 <h1>62 anos de um trabalho de amor!</h1>
                 <p>O CACS | Complexo Assistencial Cairbar Schutel, associação filantrópica sem fins lucrativos, foi
                     criado em 17 de janeiro de 1963 movido pela busca de uma sociedade mais justa e com mais
                     oportunidades.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
+                <a href="#impacto" class="btn btn-primary">Saiba mais</a>
             </div>
         </section>
 
         <!-- Seção de Impacto / Estatísticas -->
-        <section class="impact-section">
+        <section class="impact-section" id="impacto">
             <div class="container">
                 <h2 class="section-title">Nosso Impacto</h2>
                 <div class="stats-grid">
                     <div class="stat-card fade-in-up">
-                        <span class="stat-number">62</span>
+                        <span class="stat-number" style="--target: 63"></span>
                         <p>ANOS DE HISTÓRIA</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.1s;">
-                        <span class="stat-number">+ 900</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-number" style="--target: 900"></span>
                         <p>CRIANÇAS E ADOLESCENTES ATENDIDOS</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.2s;">
-                        <span class="stat-number">+ 200</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-number" style="--target: 200"></span>
                         <p>IDOSOS PASSARAM PELO CDI</p>
+                    </div>
+                    <div class="stat-card fade-in-up" style="transition-delay: 0.3s;">
+                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <p>DOAÇÃO DE ALIMENTOS</p>
+                    </div>
+                    <div class="stat-card fade-in-up" style="transition-delay: 0.4s;">
+                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <p>PESSOAS ATENDIDAS</p>
+                    </div>
+                    <div class="stat-card fade-in-up" style="transition-delay: 0.5s;">
+                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <p>NÚMERO DE PROJETOS</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Seção Sobre o CACS -->
-        <section class="about-section">
+        <section class="about-section" id="sobre">
             <div class="container split-layout">
                 <div class="image-wrapper fade-in-left">
                     <img src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2023/01/Home-CACS.jpeg"
@@ -94,19 +116,19 @@
                     <h2>CACS</h2>
                     <p>O CACS | Complexo Assistencial Cairbar Schutel trabalha para resgatar a dignidade e fomentar a
                         autonomia de pessoas em situação de vulnerabilidade.</p>
-                    <a href="#" class="btn btn-secondary">Saiba mais</a>
+                    <a href="#cdi" class="btn btn-secondary">Saiba mais</a>
                 </div>
             </div>
         </section>
 
         <!-- Seção CDI -->
-        <section class="cdi-section">
+        <section class="cdi-section" id="cdi">
             <div class="container split-layout reverse">
                 <div class="text-wrapper fade-in-left">
                     <h2>CDI - Centro Dia para Idosos</h2>
                     <p>Atendemos até 30 pessoas idosas em vulnerabilidade social e com grau de dependência, que possuem
                         limitações para realização das atividades de vida diária.</p>
-                    <a href="#" class="btn btn-secondary">Saiba mais</a>
+                    <a href="#cedesp" class="btn btn-secondary">Saiba mais</a>
                 </div>
                 <div class="image-wrapper fade-in-right">
                     <img src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/02.-Homepage-Idosos-CDI.jpg"
@@ -116,7 +138,7 @@
         </section>
 
         <!-- Grid de Imagens (Visuais CCA/CEDESP) -->
-        <section class="gallery-section">
+        <section class="gallery-section" id="cedesp">
             <div class="container gallery-grid">
                 <div class="gallery-item fade-in-up"><img
                         src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/CCA1.png" alt="Crianças">
@@ -127,19 +149,20 @@
                 <div class="gallery-item text-item fade-in-up">
                     <h3>CEDESP</h3>
                     <p>Meta para 2026: Implantação do Centro de Desenvolvimento Social e Produtivo para jovens.</p>
-                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                    <a href="#faca-parte" class="btn btn-primary">Saiba mais</a>
                 </div>
             </div>
         </section>
 
         <!-- Chamada para Ação -->
-        <section class="cta-section">
+        <section class="cta-section" id="faca-parte">
             <div class="container">
-                <h2 class="fade-in-up">Faça parte dessa causa</h2>
-                <div class="links-wrapper fade-in-up">
-                    <a href="#" class="link-item">Como apoiar &rarr;</a>
-                    <a href="#" class="link-item">Eventos &rarr;</a>
-                    <a href="#" class="link-item">Fale conosco &rarr;</a>
+                <div class="cta-box fade-in-up">
+                    <h2>Faça parte dessa causa</h2>
+                    <div class="links-wrapper">
+                        <a href="#" class="btn btn-secondary">Como apoiar</a>
+                        <a href="#contato" class="btn btn-secondary">Fale conosco</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -175,8 +198,12 @@
     <footer class="site-footer">
         <div class="container">
             <div class="social-links">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="https://www.facebook.com/cacscairbarschutel/?locale=pt_BR" aria-label="Facebook"
+                    target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com/company/cacs-assistencial/posts/?feedView=all" aria-label="LinkedIn"
+                    target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/cacs_cairbarschutel/" aria-label="Instagram"
+                    target="_blank">Instagram</a>
             </div>
             <p>&copy; 2026 Complexo Assistencial Cairbar Schutel</p>
             <a href="#">Política de Privacidade</a>
@@ -184,6 +211,7 @@
     </footer>
 
 
+    <script src="script.js"></script>
 </body>
 
 </html>
