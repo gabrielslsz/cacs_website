@@ -61,11 +61,15 @@ section {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 2.3rem;
+    /* Adjusted from 3rem */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 35px;
     color: var(--secondary-color);
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 .section-title::after {
@@ -126,8 +130,9 @@ section {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 60px;
 }
 
 .logo img {
@@ -136,6 +141,7 @@ section {
 
 .main-nav ul {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -247,26 +253,44 @@ section {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    /* Adjusted from 4rem */
+    font-weight: 700;
+    line-height: 1.15;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 700px;
+    font-size: 1.15rem;
+    /* Adjusted from 1.25rem */
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Seção de Impacto */
 .impact-section {
     background-color: var(--bg-white);
+}
+
+.impact-section .section-title {
+    color: var(--secondary-color);
+}
+
+.impact-section .section-title::after {
+    background-color: var(--primary-color);
 }
 
 .stats-grid {
@@ -309,7 +333,7 @@ section {
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     /* animation moved to .visible state */
@@ -328,7 +352,7 @@ section {
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -367,18 +391,26 @@ section {
 
 .text-wrapper {
     flex: 1;
+    padding: 20px 0;
 }
 
 .text-wrapper h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    /* Adjusted from 2.8rem */
+    font-weight: 700;
+    line-height: 1.2;
     color: var(--secondary-color);
     margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
 .text-wrapper p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    /* Adjusted from 1.15rem */
+    font-weight: 400;
+    line-height: 1.6;
+    color: #444;
 }
 
 /* Galeria / CEDESP */
