@@ -36,14 +36,24 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#" class="active">HOME</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="#">PROGRAMAS SOCIAIS</a></li>
-                    <li><a href="#">BRECHÓ</a></li>
-                    <li><a href="#">EVENTOS</a></li>
-                    <li><a href="#">COMO APOIAR</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#contato" class="btn-contact">CONTATO</a></li>
+                    <li><a href="#impacto">SOBRE NÓS</a></li>
+                    <li class="dropdown-wrapper">
+                        <a href="#sobre" style="display: flex; align-items: center; gap: 5px;">PROGRAMAS SOCIAIS <span style="font-size: 0.6rem;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cacs.html">CACS</a></li>
+                            <li><a href="acolhimento.html">Programa de Acolhimento</a></li>
+                            <li><a href="cdi.html">CDI - Centro Dia para Idosos</a></li>
+                            <li><a href="bilingue.html">CACS Bilíngue</a></li>
+                            <li><a href="florescer.html">CACS Florescer</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#brecho">BRECHÓ</a></li>
+                    <li><a href="#eventos">EVENTOS</a></li>
+                    <li><a href="#faca-parte">COMO APOIAR</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <li><a href="doacao.html" class="btn btn-primary"
+                            style="padding: 8px 24px; font-size: 0.9rem; color: var(--secondary-color);">DOE AGORA</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -62,7 +72,7 @@
             </div>
             <div class="hero-overlay"></div>
             <div class="container hero-content fade-in-up">
-                <h1>62 anos de um trabalho de amor!</h1>
+                <h1>63 anos de um trabalho de amor!</h1>
                 <p>O CACS | Complexo Assistencial Cairbar Schutel, associação filantrópica sem fins lucrativos, foi
                     criado em 17 de janeiro de 1963 movido pela busca de uma sociedade mais justa e com mais
                     oportunidades.</p>
@@ -90,16 +100,52 @@
                         <p>IDOSOS PASSARAM PELO CDI</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.3s;">
-                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <span class="stat-number" style="--target: 0;"></span>
                         <p>DOAÇÃO DE ALIMENTOS</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.4s;">
-                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <span class="stat-number" style="--target: 0;"></span>
                         <p>PESSOAS ATENDIDAS</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.5s;">
-                        <span class="stat-number" style="--target: 0; animation-delay: 2s;"></span>
+                        <span class="stat-number" style="--target: 6;"></span>
                         <p>NÚMERO DE PROJETOS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Blog do CACS -->
+        <section class="eventos-section" id="blog" style="background-color: var(--bg-white); padding: 80px 0;">
+            <div class="container fade-in-up" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Acompanhe Nosso Blog</h2>
+                <p style="color: #555; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1rem;">Fique por dentro das últimas novidades, ações e histórias inspiradoras que acontecem diariamente no CACS. Cada artigo é um reflexo do amor e dedicação que colocamos em nossos projetos.</p>
+                <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" class="btn btn-primary">Acessar o Blog Completo</a>
+            </div>
+
+            <div class="container gallery-grid">
+                <div class="gallery-item fade-in-up" style="background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
+                    <img src="Fotos/WhatsApp Image 2026-02-06 at 12.23.17.jpg" alt="Postagem do Blog 1" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Ações que Transformam</h4>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Saiba como nossas campanhas de arrecadação estão impactando a comunidade local.</p>
+                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in-up" style="animation-delay: 0.2s; background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
+                    <img src="Fotos/WhatsApp Image 2025-11-24 at 10.33.33 (3).jpg" alt="Postagem do Blog 2" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Saúde e Bem-estar no CDI</h4>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Acompanhe o dia a dia e as atividades especiais promovidas para os idosos no Centro Dia.</p>
+                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in-up" style="animation-delay: 0.4s; background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
+                    <img src="Fotos/WhatsApp Image 2025-11-27 at 19.04.09.jpg" alt="Postagem do Blog 3" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Voluntariado em Foco</h4>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Conheça as histórias das pessoas que doam seu tempo e talento para fazer a diferença.</p>
+                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -116,23 +162,122 @@
                     <h2>CACS</h2>
                     <p>O CACS | Complexo Assistencial Cairbar Schutel trabalha para resgatar a dignidade e fomentar a
                         autonomia de pessoas em situação de vulnerabilidade.</p>
-                    <a href="#cdi" class="btn btn-secondary">Saiba mais</a>
+                    <a href="cacs.html" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Programa de Acolhimento -->
+        <section class="cdi-section" id="acolhimento">
+            <div class="container split-layout reverse">
+                <div class="text-wrapper fade-in-left">
+                    <h2>Programa de Acolhimento</h2>
+                    <p>Oferecemos acolhimento e suporte integral para pessoas em situação de vulnerabilidade, visando a reintegração social e o resgate da cidadania.</p>
+                    <a href="acolhimento.html" class="btn btn-secondary">Saiba mais</a>
+                </div>
+                <div class="image-wrapper fade-in-right">
+                    <img src="Fotos/WhatsApp Image 2025-12-08 at 11.05.24.jpg" alt="Programa de Acolhimento">
                 </div>
             </div>
         </section>
 
         <!-- Seção CDI -->
         <section class="cdi-section" id="cdi">
-            <div class="container split-layout reverse">
-                <div class="text-wrapper fade-in-left">
+            <div class="container split-layout">
+                <div class="image-wrapper fade-in-left">
+                    <img src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/02.-Homepage-Idosos-CDI.jpg"
+                        alt="Atividades com Idosos">
+                </div>
+                <div class="text-wrapper fade-in-right">
                     <h2>CDI - Centro Dia para Idosos</h2>
                     <p>Atendemos até 30 pessoas idosas em vulnerabilidade social e com grau de dependência, que possuem
                         limitações para realização das atividades de vida diária.</p>
-                    <a href="#cedesp" class="btn btn-secondary">Saiba mais</a>
+                    <a href="cdi.html" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CACS Bilíngue -->
+        <section class="cdi-section" id="bilingue">
+            <div class="container split-layout reverse">
+                <div class="text-wrapper fade-in-left">
+                    <h2>CACS Bilíngue</h2>
+                    <p>Promovemos o aprendizado de um segundo idioma para crianças e adolescentes, ampliando horizontes
+                        e criando novas oportunidades de futuro.</p>
+                    <a href="bilingue.html" class="btn btn-secondary">Saiba mais</a>
                 </div>
                 <div class="image-wrapper fade-in-right">
-                    <img src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/02.-Homepage-Idosos-CDI.jpg"
-                        alt="Atividades com Idosos">
+                    <img src="Fotos/IMG-20251122-WA0023.jpg" alt="CACS Bilíngue">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CACS Florescer -->
+        <section class="cdi-section" id="florescer">
+            <div class="container split-layout">
+                <div class="image-wrapper fade-in-left">
+                    <img src="Fotos/hero-bg.jpg" alt="CACS Florescer">
+                </div>
+                <div class="text-wrapper fade-in-right">
+                    <h2>CACS Florescer</h2>
+                    <p>Iniciativa focada no desenvolvimento integral e empoderamento, cultivando talentos e promovendo
+                        qualidade de vida para a comunidade.</p>
+                    <a href="florescer.html" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Brechó -->
+        <section class="brecho-section" id="brecho">
+            <div class="container split-layout reverse">
+                <div class="text-wrapper fade-in-left">
+                    <h2>Brechó Solidário</h2>
+                    <p>Nosso brechó é uma das principais fontes de recursos para a manutenção dos nossos projetos
+                        sociais. Aqui você encontra roupas, calçados e acessórios de qualidade por preços muito
+                        acessíveis.</p>
+                    <p style="margin-bottom: 30px;">Toda a renda é revertida para as famílias que apoiamos. Venha nos
+                        visitar, faça suas compras de forma sustentável e ainda nos ajude a transformar vidas!</p>
+                    <a href="https://maps.google.com/?q=Rua+Francisco+Preto,+213+-+Vila+Morse,+SP" target="_blank"
+                        class="btn btn-primary">Venha nos visitar</a>
+                </div>
+                <div class="image-wrapper fade-in-right" style="display: flex; gap: 20px;">
+                    <img src="Fotos/Imagem do WhatsApp de 2024-11-14 à(s) 15.50.28_09ae5eb0.jpg" alt="Brechó CACS 1"
+                        style="width: 50%; height: 350px; object-fit: cover; border-radius: 20px;">
+                    <img src="Fotos/Imagem do WhatsApp de 2025-04-07 à(s) 17.05.04_b517889e.jpg" alt="Brechó CACS 2"
+                        style="width: 50%; height: 350px; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Eventos no CACS -->
+        <section class="eventos-section" id="eventos" style="background-color: var(--bg-light); padding: 80px 0;">
+            <div class="container fade-in-up" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Eventos no CACS</h2>
+                <p style="color: #555; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1rem;">Nossos eventos
+                    são momentos de muita alegria, união e solidariedade. Desde os tradicionais almoços beneficentes até
+                    a animada capoeira dos idosos e nossas campanhas contra a fome, cada encontro fortalece nossos laços
+                    com a comunidade.</p>
+                <a href="#faca-parte" class="btn btn-primary">Participar</a>
+            </div>
+
+            <div class="container gallery-grid">
+                <div class="gallery-item fade-in-up">
+                    <img src="Fotos/CB2.jpg" alt="Campanha Contra Fome"
+                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px;">
+                    <h4 style="color: var(--secondary-color); margin-top: 15px; text-align: center; font-size: 1.2rem;">
+                        Campanha Contra Fome</h4>
+                </div>
+                <div class="gallery-item fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="Fotos/Foto (30).JPG" alt="Capoeira dos Idosos"
+                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px;">
+                    <h4 style="color: var(--secondary-color); margin-top: 15px; text-align: center; font-size: 1.2rem;">
+                        Capoeira dos Idosos</h4>
+                </div>
+                <div class="gallery-item fade-in-up" style="animation-delay: 0.4s;">
+                    <img src="Fotos/IMG_2072.JPG" alt="Almoços Beneficentes"
+                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px;">
+                    <h4 style="color: var(--secondary-color); margin-top: 15px; text-align: center; font-size: 1.2rem;">
+                        Almoços Beneficentes</h4>
                 </div>
             </div>
         </section>
@@ -204,6 +349,7 @@
                     target="_blank">LinkedIn</a>
                 <a href="https://www.instagram.com/cacs_cairbarschutel/" aria-label="Instagram"
                     target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@cacs-cairbarschutel" aria-label="YouTube" target="_blank">YouTube</a>
             </div>
             <p>&copy; 2026 Complexo Assistencial Cairbar Schutel</p>
             <a href="#">Política de Privacidade</a>
