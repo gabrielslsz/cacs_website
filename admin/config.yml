@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: SEUUSUARIO/cacs
+  name: git-gateway
   branch: main
 
 media_folder: "images"
@@ -15,15 +14,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-
-      - label: "Título"
-        name: "title"
-        widget: "string"
-
-      - label: "Data"
-        name: "date"
-        widget: "datetime"
-
-      - label: "Conteúdo"
-        name: "body"
-        widget: "markdown"
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
