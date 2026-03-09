@@ -4,7 +4,7 @@
     /* Amarelo */
     --primary-hover: rgb(220, 200, 20);
     --secondary-color: rgb(18, 37, 56);
-    /* Azul Escuro */
+    /* Azul Escuroo */
     --secondary-hover: rgb(10, 25, 40);
     --text-color: #333;
     --bg-light: #f8f9fa;
@@ -61,11 +61,15 @@ section {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 2.3rem;
+    /* Adjusted from 3rem */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 35px;
     color: var(--secondary-color);
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 .section-title::after {
@@ -126,8 +130,9 @@ section {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 60px;
 }
 
 .logo img {
@@ -136,6 +141,7 @@ section {
 
 .main-nav ul {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -161,6 +167,57 @@ section {
 .main-nav a:hover::after,
 .main-nav a.active::after {
     width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: var(--secondary-color);
+    min-width: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dropdown-wrapper:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 6px 20px;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu a::after {
+    display: none; /* Removendo o sublinhado animado para os itens do dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--primary-color);
 }
 
 .btn-contact {
@@ -247,26 +304,44 @@ section {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    /* Adjusted from 4rem */
+    font-weight: 700;
+    line-height: 1.15;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 700px;
+    font-size: 1.15rem;
+    /* Adjusted from 1.25rem */
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Seção de Impacto */
 .impact-section {
     background-color: var(--bg-white);
+}
+
+.impact-section .section-title {
+    color: var(--secondary-color);
+}
+
+.impact-section .section-title::after {
+    background-color: var(--primary-color);
 }
 
 .stats-grid {
@@ -309,7 +384,7 @@ section {
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     /* animation moved to .visible state */
@@ -328,7 +403,7 @@ section {
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -367,18 +442,26 @@ section {
 
 .text-wrapper {
     flex: 1;
+    padding: 20px 0;
 }
 
 .text-wrapper h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    /* Adjusted from 2.8rem */
+    font-weight: 700;
+    line-height: 1.2;
     color: var(--secondary-color);
     margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
 .text-wrapper p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    /* Adjusted from 1.15rem */
+    font-weight: 400;
+    line-height: 1.6;
+    color: #444;
 }
 
 /* Galeria / CEDESP */
@@ -589,6 +672,31 @@ section {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .dropdown-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.1);
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+    }
+    
+    .dropdown-wrapper:hover .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown-menu a {
+        text-align: center;
     }
 
     .hero-content h1 {
