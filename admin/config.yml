@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: gabrielslsz/cacs_website.git
-  branch: master
+  repo: SEUUSUARIO/cacs
+  branch: main
 
 media_folder: "images"
 public_folder: "/images"
@@ -11,9 +11,19 @@ collections:
     label: "Posts"
     folder: "posts"
     create: true
+
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
