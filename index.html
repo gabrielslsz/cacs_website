@@ -49,9 +49,15 @@
                     </li>
                     <li><a href="#brecho">BRECHÓ</a></li>
                     <li><a href="#eventos">EVENTOS</a></li>
-                    <li><a href="#faca-parte">COMO APOIAR</a></li>
+                    <li class="dropdown-wrapper">
+                        <a href="#faca-parte" style="display: flex; align-items: center; gap: 5px;">COMO APOIAR <span style="font-size: 0.6rem;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="doacao.html">Doação</a></li>
+                            <li><a href="voluntario.html">Seja Voluntário</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contato">CONTATO</a></li>
-                    <li><a href="doacao.html" class="btn btn-primary"
+                    <li><a href="https://www.paypal.com/donate/?hosted_button_id=VPFVFTJXM2VK2" target="_blank" class="btn btn-primary"
                             style="padding: 8px 24px; font-size: 0.9rem; color: var(--secondary-color);">DOE AGORA</a>
                     </li>
                 </ul>
@@ -100,11 +106,14 @@
                         <p>IDOSOS PASSARAM PELO CDI</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.3s;">
-                        <span class="stat-number" style="--target: 0;"></span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-number" style="--target: 100;"></span>
+                        <span style="font-size: 0.8em; display: block; margin-top: -10px; margin-bottom: 10px;">toneladas</span>
                         <p>DOAÇÃO DE ALIMENTOS</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.4s;">
-                        <span class="stat-number" style="--target: 0;"></span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-number" style="--target: 2000;"></span>
                         <p>PESSOAS ATENDIDAS</p>
                     </div>
                     <div class="stat-card fade-in-up" style="transition-delay: 0.5s;">
@@ -115,41 +124,16 @@
             </div>
         </section>
 
-        <!-- Seção Blog do CACS -->
-        <section class="eventos-section" id="blog" style="background-color: var(--bg-white); padding: 80px 0;">
-            <div class="container fade-in-up" style="text-align: center; margin-bottom: 50px;">
-                <h2 class="section-title">Acompanhe Nosso Blog</h2>
-                <p style="color: #555; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1rem;">Fique por dentro das últimas novidades, ações e histórias inspiradoras que acontecem diariamente no CACS. Cada artigo é um reflexo do amor e dedicação que colocamos em nossos projetos.</p>
-                <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" class="btn btn-primary">Acessar o Blog Completo</a>
-            </div>
-
-            <div class="container gallery-grid">
-                <div class="gallery-item fade-in-up" style="background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
-                    <img src="Fotos/WhatsApp Image 2026-02-06 at 12.23.17.jpg" alt="Postagem do Blog 1" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
-                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Ações que Transformam</h4>
-                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Saiba como nossas campanhas de arrecadação estão impactando a comunidade local.</p>
-                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in-up" style="animation-delay: 0.2s; background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
-                    <img src="Fotos/WhatsApp Image 2025-11-24 at 10.33.33 (3).jpg" alt="Postagem do Blog 2" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
-                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Saúde e Bem-estar no CDI</h4>
-                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Acompanhe o dia a dia e as atividades especiais promovidas para os idosos no Centro Dia.</p>
-                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in-up" style="animation-delay: 0.4s; background-color: var(--bg-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
-                    <img src="Fotos/WhatsApp Image 2025-11-27 at 19.04.09.jpg" alt="Postagem do Blog 3" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
-                        <h4 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;">Voluntariado em Foco</h4>
-                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Conheça as histórias das pessoas que doam seu tempo e talento para fazer a diferença.</p>
-                        <a href="https://cacs-cairbarschutel.org.br/blog/" target="_blank" style="color: var(--secondary-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase;">Ler artigo &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Seção Blog do CACS (Carregado dinamicamente via blog.html) -->
+        <iframe id="blog-iframe" src="blog.html" style="width: 100%; height: 800px; border: none; overflow: hidden;" scrolling="no" title="Acompanhe Nosso Blog"></iframe>
+        <script>
+            // Escuta a mensagem enviada pelo blog.html para ajustar a altura automaticamente
+            window.addEventListener('message', function(event) {
+                if (event.data.type === 'resizeIframe' && event.data.height) {
+                    document.getElementById('blog-iframe').style.height = event.data.height + 'px';
+                }
+            });
+        </script>
 
         <!-- Seção Sobre o CACS -->
         <section class="about-section" id="sobre">
@@ -249,6 +233,23 @@
             </div>
         </section>
 
+        <!-- Grid de Imagens (Visuais CCA/CEDESP) -->
+        <section class="gallery-section" id="cedesp">
+            <div class="container gallery-grid">
+                <div class="gallery-item fade-in-up"><img
+                        src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/CCA1.png" alt="Crianças">
+                </div>
+                <div class="gallery-item fade-in-up"><img
+                        src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/CCA2.png" alt="Artesanato">
+                </div>
+                <div class="gallery-item text-item fade-in-up">
+                    <h3>CEDESP</h3>
+                    <p>Meta para 2026: Implantação do Centro de Desenvolvimento Social e Produtivo para jovens.</p>
+                    <a href="#faca-parte" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Seção Eventos no CACS -->
         <section class="eventos-section" id="eventos" style="background-color: var(--bg-light); padding: 80px 0;">
             <div class="container fade-in-up" style="text-align: center; margin-bottom: 50px;">
@@ -282,30 +283,13 @@
             </div>
         </section>
 
-        <!-- Grid de Imagens (Visuais CCA/CEDESP) -->
-        <section class="gallery-section" id="cedesp">
-            <div class="container gallery-grid">
-                <div class="gallery-item fade-in-up"><img
-                        src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/CCA1.png" alt="Crianças">
-                </div>
-                <div class="gallery-item fade-in-up"><img
-                        src="https://cacs-cairbarschutel.org.br/wp-content/uploads/2024/09/CCA2.png" alt="Artesanato">
-                </div>
-                <div class="gallery-item text-item fade-in-up">
-                    <h3>CEDESP</h3>
-                    <p>Meta para 2026: Implantação do Centro de Desenvolvimento Social e Produtivo para jovens.</p>
-                    <a href="#faca-parte" class="btn btn-primary">Saiba mais</a>
-                </div>
-            </div>
-        </section>
-
         <!-- Chamada para Ação -->
         <section class="cta-section" id="faca-parte">
             <div class="container">
                 <div class="cta-box fade-in-up">
                     <h2>Faça parte dessa causa</h2>
                     <div class="links-wrapper">
-                        <a href="#" class="btn btn-secondary">Como apoiar</a>
+                        <a href="doacao.html" class="btn btn-secondary">Como apoiar</a>
                         <a href="#contato" class="btn btn-secondary">Fale conosco</a>
                     </div>
                 </div>

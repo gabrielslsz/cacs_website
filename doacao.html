@@ -45,7 +45,13 @@
                     </li>
                     <li><a href="index.html">BRECHÓ</a></li>
                     <li><a href="index.html">EVENTOS</a></li>
-                    <li><a href="index.html#faca-parte">COMO APOIAR</a></li>
+                    <li class="dropdown-wrapper">
+                        <a href="index.html#faca-parte" style="display: flex; align-items: center; gap: 5px;">COMO APOIAR <span style="font-size: 0.6rem;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="doacao.html">Doação</a></li>
+                            <li><a href="voluntario.html">Seja Voluntário</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#contato">CONTATO</a></li>
                     <li><a href="doacao.html" class="btn btn-primary"
                             style="padding: 8px 24px; font-size: 0.9rem; color: var(--secondary-color);">DOE AGORA</a>
@@ -74,15 +80,15 @@
                         style="border: 1px solid #eee; text-align: left; display: flex; flex-direction: column; height: 100%;">
                         <h3 style="color: var(--secondary-color); margin-bottom: 15px; font-size: 1.5rem;">Doação
                             Financeira via PIX</h3>
-                        <p style="color: #555; margin-bottom: 20px; flex-grow: 1;">Contribua com qualquer valor para
+                        <p style="color: #555; margin-bottom: 20px;">Contribua com qualquer valor para
                             apoiar a
                             manutenção dos nossos projetos diários.</p>
                         <div
-                            style="background: var(--bg-light); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            style="background: var(--bg-light); padding: 15px; border-radius: 10px; margin-top: auto; margin-bottom: auto;">
                             <strong>Chave PIX (CNPJ):</strong><br>
-                            <span style="color: var(--secondary-color); font-size: 1.1rem;">12.345.678/0001-90</span>
+                            <span id="chave-pix-texto" style="color: var(--secondary-color); font-size: 1.1rem;">12.345.678/0001-90</span>
                         </div>
-                        <a href="#" class="btn btn-primary"
+                        <a href="javascript:void(0)" onclick="navigator.clipboard.writeText(document.getElementById('chave-pix-texto').innerText).then(() => alert('Chave PIX copiada!'))" class="btn btn-primary"
                             style="display: block; text-align: center; width: 100%; margin-top: auto;">Copiar Chave
                             PIX</a>
                     </div>
@@ -105,21 +111,17 @@
                             style="display: block; text-align: center; width: 100%; margin-top: auto;">Ver no Mapa</a>
                     </div>
 
-                    <!-- Opção 3: Empresa Parceira/Voluntariado -->
+                    <!-- Opção 3: Nota Fiscal Paulista -->
                     <div class="stat-card fade-in-up"
                         style="transition-delay: 0.2s; border: 1px solid #eee; text-align: left; display: flex; flex-direction: column; height: 100%;">
-                        <h3 style="color: var(--secondary-color); margin-bottom: 15px; font-size: 1.5rem;">Voluntariado
-                            e Parcerias</h3>
-                        <p style="color: #555; margin-bottom: 20px; flex-grow: 1;">Junte-se à nossa equipe como
-                            voluntário ou torne
-                            sua empresa uma parceira transformadora.</p>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 15px; font-size: 1.5rem;">Cadastro da Nota Fiscal Paulista</h3>
+                        <p style="color: #555; margin-bottom: 20px; flex-grow: 1;"><strong>Apoie o CACS sem nenhum ônus!</strong> Doe seus cupons fiscais e ajude nossos projetos.</p>
                         <ul style="color: #555; margin-bottom: 20px; padding-left: 20px; list-style-type: disc;">
-                            <li>Apoio pedagógico</li>
-                            <li>Apoio em eventos e logística</li>
-                            <li>Investimento social privado</li>
+                            <li>Via sistema (cadastre seu CPF para doação automática)</li>
+                            <li>Traga sua nota fiscal impressa sem CPF</li>
                         </ul>
-                        <a href="index.html#contato" class="btn btn-primary"
-                            style="display: block; text-align: center; width: 100%; margin-top: auto;">Fale Conosco</a>
+                        <a href="nfp.html" class="btn btn-primary"
+                            style="display: block; text-align: center; width: 100%; margin-top: auto;">Saiba Como Fazer</a>
                     </div>
                 </div>
             </div>
