@@ -4,7 +4,7 @@
     /* Amarelo */
     --primary-hover: rgb(220, 200, 20);
     --secondary-color: rgb(18, 37, 56);
-    /* Azul Escuro */
+    /* Azul Escuroo */
     --secondary-hover: rgb(10, 25, 40);
     --text-color: #333;
     --bg-light: #f8f9fa;
@@ -167,6 +167,57 @@ section {
 .main-nav a:hover::after,
 .main-nav a.active::after {
     width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: var(--secondary-color);
+    min-width: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dropdown-wrapper:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 6px 20px;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu a::after {
+    display: none; /* Removendo o sublinhado animado para os itens do dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--primary-color);
 }
 
 .btn-contact {
@@ -557,12 +608,24 @@ section {
     font-weight: bold;
 }
 
+/* Botões de Ação dos Programas */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
 /* Responsividade Mobile */
 @media (max-width: 992px) {
 
-    .split-layout,
-    .split-layout.reverse {
+    .split-layout {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .split-layout.reverse {
+        flex-direction: column-reverse;
         text-align: center;
     }
 
@@ -576,6 +639,10 @@ section {
     }
 
     .badges {
+        justify-content: center;
+    }
+
+    .action-buttons {
         justify-content: center;
     }
 }
@@ -621,6 +688,41 @@ section {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .dropdown-wrapper {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.1);
+        width: 100%;
+        display: none;
+        margin-top: 5px;
+        padding: 10px 0;
+    }
+    
+    .dropdown-wrapper:hover .dropdown-menu,
+    .dropdown-wrapper:focus-within .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown-menu li {
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        text-align: center;
+        padding: 10px;
     }
 
     .hero-content h1 {
